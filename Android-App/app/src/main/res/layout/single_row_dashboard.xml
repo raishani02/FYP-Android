@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/single_row">
+
+            <TextView
+                android:id="@+id/c_id"
+                android:layout_width="wrap_content"
+                android:layout_height="?android:attr/listPreferredItemHeight"
+                android:layout_alignParentLeft="true"
+                android:text="CS-342"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/c_name"
+                android:layout_width="wrap_content"
+                android:layout_height="?android:attr/listPreferredItemHeight"
+                android:layout_marginLeft="123dp"
+                android:layout_toRightOf="@id/c_id"
+                android:text="OOP"
+                android:textColor="#000000"
+                android:textSize="20dp">
+
+            </TextView>
+        </RelativeLayout>
+
+        <!--This is the layout "expanded_view" we will
+            hide initially and show as expanded
+            layout when user clicks on any of the item-->
+        <RelativeLayout
+            android:id="@+id/expanded_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/single_row">
+
+            <!--It has a text view which we will use in our case as
+                a description text for the languages-->
+            <TextView
+                android:id="@+id/c_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Course Name:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/course_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/t_name_text"
+                android:text="Object Oriented Programming"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/t_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/c_name_text"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Teacher Name:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/t_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/course_name"
+                android:layout_marginStart="10dp"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/t_name_text"
+                android:text="Ishaq"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/e_st_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Enrolled Students:"
+                android:layout_below="@id/t_name_text"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/t_students"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/t_name"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/e_st_text"
+                android:text="45"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/leader_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/t_students"
+
+                android:layout_toRightOf="@id/t_students"
+                android:background="@drawable/btn_bg"
+                android:text="LeaderBoard" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

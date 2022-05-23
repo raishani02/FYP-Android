@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Leaderboard">
+
+    <ImageView
+        android:id="@+id/Icon_logo"
+        android:layout_width="match_parent"
+        android:layout_height="251dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/leader_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Icon_logo"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="-92dp"
+        android:text="LeaderBoard"
+        android:textColor="@color/blue"
+        android:textSize="36sp"
+
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/course"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/leader_board"
+        android:layout_marginStart="92dp"
+
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="-66dp"
+        android:background="@drawable/btn_bg"
+        android:text="Course" />
+
+    <Button
+        android:id="@+id/project"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/course"
+        android:layout_alignBottom="@+id/course"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginBottom="-92dp"
+        android:background="@drawable/btn_bg"
+        android:text="Project" />
+
+    <include layout="@layout/navigation_leaderboard"/>
+
+</RelativeLayout>

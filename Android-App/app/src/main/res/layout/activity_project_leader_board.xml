@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Project_Leader_board">
+    <TableRow
+        android:background="#FF03DAC5">
+
+        <TextView
+            android:id="@+id/sr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center_horizontal"
+            android:padding="10sp"
+            android:text="Sr#"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/gr_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center_horizontal"
+            android:padding="10sp"
+            android:text="Gr Id"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="User ID"
+            android:textColor="@android:color/white"
+            android:padding="10sp"
+            android:id="@+id/u_id"
+            android:textSize="14sp"
+            android:layout_weight="4"
+            android:gravity="center_horizontal"
+            />
+
+
+        <TextView
+            android:id="@+id/task"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center_horizontal"
+            android:padding="10sp"
+            android:text="D id"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/deliverable"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center_horizontal"
+            android:padding="10sp"
+            android:text="Staus"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/b_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center_horizontal"
+            android:padding="10sp"
+            android:text="Badge"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+
+    </TableRow>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/project_leader_board"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+</TableLayout>
+    <include layout="@layout/navigation_leaderboard"/>
+</RelativeLayout>
+
+
