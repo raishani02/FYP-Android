@@ -114,7 +114,11 @@ public class Course_dashboard extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.nav_home:
-                        startActivity(new Intent(getApplicationContext(), Profile.class));
+                        Intent intent1=getIntent();
+                        Intent intent = new Intent(getApplicationContext(),Profile.class);
+                        intent.putExtra("email", intent1.getStringExtra("email"));
+                        intent.putExtra("name",intent1.getStringExtra("name"));
+                        startActivity(intent);
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_dashboard:

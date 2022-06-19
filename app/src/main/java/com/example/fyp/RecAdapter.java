@@ -1,5 +1,6 @@
 package com.example.fyp;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -95,7 +97,10 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.RecViewHolder> i
 
         @Override
         public void onClick(View v) {
+            Intent intent1 =((Activity) context).getIntent();
             Intent intent = new Intent (v.getContext(), Leaderboard.class);
+            intent.putExtra("name",intent1.getStringExtra("name"));
+            intent.putExtra("email",intent1.getStringExtra("email"));
             v.getContext().startActivity(intent);
         }
 

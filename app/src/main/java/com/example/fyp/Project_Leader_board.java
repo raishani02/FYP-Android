@@ -47,15 +47,27 @@ public class Project_Leader_board extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.nav_home:
-                        startActivity(new Intent(getApplicationContext(), Profile.class));
+                        Intent intent1=getIntent();
+                        Intent intent = new Intent(getApplicationContext(),Profile.class);
+                        intent.putExtra("email", intent1.getStringExtra("email"));
+                        intent.putExtra("name",intent1.getStringExtra("name"));
+                        startActivity(intent);
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_dashboard:
-                        startActivity(new Intent(getApplicationContext(), Course_dashboard.class));
+                        Intent intent2=getIntent();
+                        Intent intent3 = new Intent(getApplicationContext(),Course_dashboard.class);
+                        intent3.putExtra("email", intent2.getStringExtra("email"));
+                        intent3.putExtra("name",intent2.getStringExtra("name"));
+                        startActivity(intent3);
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_leaderboard:
-                        startActivity(new Intent(getApplicationContext(), Leaderboard.class));
+                        Intent intent4=getIntent();
+                        Intent intent5 = new Intent(getApplicationContext(),Leaderboard.class);
+                        intent5.putExtra("email", intent4.getStringExtra("email"));
+                        intent5.putExtra("name",intent4.getStringExtra("name"));
+                        startActivity(intent5);
                         overridePendingTransition(0,0);
                     case R.id.nav_logout:
                         showPopup();

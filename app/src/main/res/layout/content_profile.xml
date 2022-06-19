@@ -39,7 +39,8 @@
             <TextView
                 style="@style/profileDetailsMiniText"
                 android:layout_toRightOf="@id/nameImageView"
-                android:text="Rai Arslan Riasat" />
+                android:text="Rai Arslan Riasat"
+                android:id="@+id/name_id"/>
 
         </RelativeLayout>
 
@@ -47,21 +48,26 @@
 
 
         <View style="@style/proifleDetailsView" />
-        <RelativeLayout style="@style/profileDetailsLayout">
+
+        <RelativeLayout
+            style="@style/profileDetailsLayout"
+            android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/emailImageView"
-                android:src="@drawable/ic_email"
-                style="@style/profileDetailsImage" />
+                style="@style/profileDetailsImage"
+                android:src="@drawable/ic_email" />
 
             <TextView
-                android:text="Email"
+                style="@style/profileDetailsTextMain"
                 android:layout_toRightOf="@id/emailImageView"
-                style="@style/profileDetailsTextMain" />
+                android:text="Email" />
 
             <TextView
                 style="@style/profileDetailsMiniText"
                 android:layout_toRightOf="@id/emailImageView"
-                android:text="raishani02@gmail.com" />
+                android:text="raishani02@gmail.com"
+                android:id="@+id/email_id"/>
 
         </RelativeLayout>
 
@@ -84,7 +90,8 @@
             <TextView
                 style="@style/profileDetailsMiniText"
                 android:layout_toRightOf="@id/dobImageView"
-                android:text="04-08-2001" />
+                android:text="04-08-2001"
+                android:id="@+id/dob_id"/>
 
         </RelativeLayout>
 
